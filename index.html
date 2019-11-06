@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Navettes</title>
+</head>
+<body>
+<!-- header blanc Navette aéroport -->
+<nav class="navbar navbar-light bg-light mt-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-brand col-4 mb-4 h1" href="#">Navette Gare - Aéroport</span>
+</nav> 
+
+<!-- Navette + date du jour avec boutons next et previous -->
+<nav id="nav-date" class="navbar navbar-dark bg-dark col mt-4">
+    <button id="button-previous" class="btn btn-light btn-outline-secondary col-1" disabled="true" type="button"><i class="fas fa-arrow-left"></i></button>
+    <span id="today-date" class="navbar-brand mb-0 h1" href="#"></span></td>
+    <button id="button-next" class="btn btn-light btn-outline-secondary col-1" type="button"><i class="fas fa-arrow-right"></i></button>
+</nav>
+
+<!-- Liste des trains correspondant a la date du jour -->
+<main class="container col-12 p-1 mt-4">
+   <form>
+        <table class="table col-lg-12">
+            <tbody class="m-4">
+
+                <tr class="container fluid col-lg-12 p-4">
+                    <td >
+                        Départ de .heure.
+                    </td>
+                    <td >
+                         <select id="select-sit" class="form-control">
+                            <option selected>Nombre de places</option>
+                        </select>
+                    </td>
+                    <td >
+                        <label>8€</label>
+                        <!-- réservez si place libre ou trop tard si plus de place -->
+                        <!-- button en btn-primary lorsqu'activé -->
+                        <p><button id="submit-sit" type="button" class="btn btn-light">Réservez</button></p>
+                        
+                    </td>
+                    <td >
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>La tournée est déjà partie</strong>
+                        </div>
+                        <!-- message d'alerte places prises
+                        nombre de places limité ou form input -->
+                    </td>
+                    <td >
+                        <div id="free-sit"></div>
+                        <p>
+                            <label>Places libres</label>
+                        </p>                   
+                    </td>
+                </tr>
+
+
+
+
+
+
+
+
+                <tr class="container fluid col-lg-12 p-4">
+                        <td >
+                            Départ de .heure.
+                        </td>
+                        <td >
+                             <select class="form-control">
+                                <option selected>Nombre de places</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </td>
+                        <td >
+                            <label>8€</label>
+                            <!-- réservez si place libre ou trop tard si plus de place -->
+                            <!-- button en btn-primary lorsqu'activé -->
+                            <p><button type="button" class="btn btn-light">Réservez</button></p>
+                            
+                        </td>
+                        <td>
+                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Depêchez-vous! </strong>Il y a une forte demande
+                            </div>
+                            <!-- message d'alerte places prises
+                            nombre de places limité ou form input -->
+                        </td>
+                        <td >
+                            <div><!-- + compteur -->0</div>
+                            <p>
+                                <label>Places libres</label>
+                            </p>                   
+                        </td>
+                    </tr>
+                    <tr class="container fluid col-lg-12 p-4">
+                            <td >
+                                Départ de .heure.
+                            </td>
+                            <td >
+                                 <select class="form-control">
+                                    <option selected>Nombre de places</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </td>
+                            <td >
+                                <label>8€</label>
+                                <!-- réservez si place libre ou trop tard si plus de place -->
+                                <!-- button en btn-primary lorsqu'activé -->
+                                <p><button type="button" class="btn btn-light">Réservez</button></p>
+                                
+                            </td>
+                            <td >
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <strong>TROP TARD!</strong>La prochaine fois venez plus tôt!
+                                </div>
+                                <!-- message d'alerte places prises
+                                nombre de places limité ou form input -->
+                            </td>
+                            <td >
+                                <div><!-- + compteur -->0</div>
+                                <p>
+                                    <label>Places libres</label>
+                                </p>                   
+                            </td>
+                        </tr>
+                        <tr class="container fluid col-lg-12 p-4">
+                                <td >
+                                    Départ de .heure.
+                                </td>
+                                <td >
+                                     <select class="form-control">
+                                        <option selected>Nombre de places</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </td>
+                                <td >
+                                    <label>8€</label>
+                                    <!-- réservez si place libre ou trop tard si plus de place -->
+                                    <!-- button en btn-primary lorsqu'activé -->
+                                    <p><button type="button" class="btn btn-light">Réservez</button></p>
+                                    
+                                </td>
+                                <td >
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <strong>Votre réservation du 26 sept. à 17h</strong>
+                                    </div>
+                                    <!-- message d'alerte places prises
+                                    nombre de places limité ou form input -->
+                                </td>
+                                <td >
+                                    <div><!-- + compteur -->0</div>
+                                    <p>
+                                        <label>Places libres</label>
+                                    </p>                   
+                                </td>
+                            </tr>
+            </tbody>
+       </table> 
+    </form>
+</main>
+    <script src="https://kit.fontawesome.com/7c316f63e8.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/js/TodayDate.class.js"></script>
+    <!-- <script type="module" src="./assets/js/HtmlElement.class.js"></script>
+    <script type="module" src="./assets/js/RowElement.class.js"></script>
+    <script type="module" src="./assets/js/ColumnElement.class.js"></script> -->
+   
+   
+    <script src="./assets/js/trains.js"></script>
+    
+</body>
+</html>
